@@ -51,10 +51,12 @@
   <section>
     <h1>Easymarklet</h1>
     <p>A gem to help you create bookmarklets for your Rails app.</p>
-    <pre>
-      <code>gem 'easymarklet'</code>
-      <code>rails g easymarklet:dlux gemloupe</code>
-    </pre>
+    <div class="fragment fade-in">
+      <pre>
+        <code>gem 'easymarklet'</code>
+        <code>rails g easymarklet:dlux gemloupe</code>
+      </pre>
+    </div>
   </section>
   <section>
     <h1>Definitions</h1>
@@ -96,14 +98,14 @@
   protocol : 'https',
   consumer : {
     css : ['/assets/remote_loupe_bookmarklet.css'], // could be an array or a string
-    methods : { }, // The methods that the producer can call
-    init : function(url,producer){ }
+    methods : { ... }, // The methods that the producer can call
+    init : function(url,producer){ ... }
   },
   producer : {
     buffer : "/remote_loupe_producer/buffer",
     path : "", // Avoid a flash before the correct page is set by the client
-    methods : { }, // The methods that the consumer can call
-    init : function(){ }
+    methods : { ... }, // The methods that the consumer can call
+    init : function(){ ... }
   }
 }
 window.RemoteLoupeBookmarklet = RemoteLoupeBookmarklet;
